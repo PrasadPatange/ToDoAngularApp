@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Todo } from "../../Todo";
+import { Todo } from "../../Todo"; //
 
 @Component({
   selector: 'app-todos',
@@ -26,7 +26,7 @@ export class TodosComponent implements OnInit {
   }
 
   deleteTodo(todo: Todo) {
-    console.log(todo);
+    console.log(todo);  //Use for Debugging
     const index = this.todos.indexOf(todo);
     this.todos.splice(index, 1);  //splice(index,deleteCount no) : Delete Element using index number
     localStorage.setItem("todos",JSON.stringify(this.todos)); //To Store in LocalStorage
